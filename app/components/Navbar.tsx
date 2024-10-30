@@ -18,7 +18,7 @@ const Navbar = () => {
 							/>
 						</Link>
 					</div>
-					<div className="flex-shrink-0 flex px-2 py-3 items-center space-x-8">
+					{/* <div className="flex-shrink-0 flex px-2 py-3 items-center space-x-8">
 						<Link
 							href={"#"}
 							className="text-gray-700 hover:text-indigo-700 text-sm
@@ -32,7 +32,7 @@ const Navbar = () => {
 						>
 							Sign up
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</nav>

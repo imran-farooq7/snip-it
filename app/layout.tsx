@@ -3,6 +3,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
+import { experimental__simple } from "@clerk/themes";
+
 const poppins = Poppins({
 	weight: ["300", "500", "600", "700", "800"],
 	subsets: ["latin"],
@@ -20,8 +22,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${poppins.className} antialiased`}>
-				<ClerkProvider>
+			<body className={`${poppins.className}  antialiased`}>
+				<ClerkProvider
+					appearance={{
+						baseTheme: experimental__simple,
+						elements: {
+							formButtonPrimary:
+								"bg-emerald-500 border-none text-white py-3 hover:bg-emerald-700",
+							buttonArrowIcon: "hidden",
+						},
+					}}
+				>
 					<Navbar />
 					{children}
 				</ClerkProvider>
